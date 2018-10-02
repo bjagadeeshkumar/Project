@@ -18,7 +18,7 @@ node {
    def MAVEN_GOALS = 'clean install -X'
    def MAVEN_HOME = tool 'M2_HOME'
    def JAVA_HOME = tool 'JAVA_HOME'
-   def SONAR_URL = 'http://18.223.118.27:9000'
+   def SONAR_URL = 'http://18.219.19.244:9000'
    def SONAR_LOGIN='admin'
    def SONAR_PASSWORD='admin'
    def artifactory_user='admin'
