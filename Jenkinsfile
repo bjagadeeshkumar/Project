@@ -12,7 +12,7 @@ import java.net.URL
 
 
 node {
-   def GIT_URL = 'https://github.com/bjagadeeshkumar/Project.git'
+   def GIT_URL = 'https://github.com/bjagadeeshkumar/project1'
    def GIT_BRANCH = 'master'
    def SONAR_BRANCH = 'master'
    def MAVEN_GOALS = 'clean install -X'
@@ -72,7 +72,7 @@ node {
      
     /*** sh 'b=`$ARTIFACT_VERSION| cut -f1 -d - `; echo $b' ***/
      echo "INFO => Deploying package to artifactory"
-     sh "curl -u $artifactory_user:$artifactory_password -T $WORKSPACE/target/hello-world-war-${ARTIFACT_VERSION}.war http://18.223.118.27:8081/artifactory/generic-local/hello-world-war-${ARTIFACT_VERSION}.war"
+     sh "curl -u $artifactory_user:$artifactory_password -T $WORKSPACE/target/hello-world-war-${ARTIFACT_VERSION}.war http://172.17.0.3:8081/artifactory/generic-local/hello-world-war-${ARTIFACT_VERSION}.war"
                 
    }
    stage('\u2784 Build Docker Image')
